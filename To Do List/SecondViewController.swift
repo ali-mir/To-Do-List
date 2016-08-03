@@ -34,8 +34,14 @@ class SecondViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        itemTextField.resignFirstResponder()
+        self.view.endEditing(true)
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        itemTextField.resignFirstResponder()
+        return true
     }
 
 

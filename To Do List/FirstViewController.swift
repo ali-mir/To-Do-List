@@ -39,7 +39,10 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         cell.textLabel?.text = toDoList[indexPath.row]
         return cell
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        toDoListTable.reloadData()
     }
 
 
