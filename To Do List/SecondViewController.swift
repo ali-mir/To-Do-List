@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
         if item != "" {
             toDoList.append(item)
             itemTextField.text = ""
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
         }
     }
     
